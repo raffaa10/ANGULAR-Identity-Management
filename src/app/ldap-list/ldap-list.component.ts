@@ -15,7 +15,7 @@ import {Router} from '@angular/router';
 export class LdapListComponent implements OnInit {
 
 
-  constructor(private usersService: UsersService, private rooter: Router) { }
+  constructor(private usersService: UsersService, private router: Router) { }
 
   displayedColumns: string[] = ['nomComplet', 'mail', 'employeNumero'];
   dataSource = new MatTableDataSource<UserLdap>([]);
@@ -64,11 +64,19 @@ export class LdapListComponent implements OnInit {
 
   // tslint:disable-next-line:typedef
   edit(login: string) {
-    this.rooter.navigate(['/user', login]).then( e => {
+    this.router.navigate(['/user', login]).then( e => {
       if (! e) {
         console.log('Navigation has failed');
       }
     });
   }
 
+  // tslint:disable-next-line:typedef
+  addUser() {
+    this.router.navigate(['user/add']).then( (e) => {
+      if (!e) {
+        console.log('Navigation has failed!');
+      }
+    } );
+  }
 }
