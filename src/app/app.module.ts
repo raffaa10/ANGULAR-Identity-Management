@@ -14,15 +14,19 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatIconModule } from '@angular/material/icon';
 import { MatListModule } from '@angular/material/list';
-import { MatFormFieldModule } from "@angular/material/form-field";
-import { MatSlideToggleModule } from "@angular/material/slide-toggle";
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { LdapDetailComponent } from './ldap-detail/ldap-detail.component';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+
 
 @NgModule({
   declarations: [
     AppComponent,
     LdapListComponent,
     PageNotFoundComponent,
-    NavbarComponent
+    NavbarComponent,
+    LdapDetailComponent
   ],
   imports: [
     BrowserModule,
@@ -36,7 +40,9 @@ import { MatSlideToggleModule } from "@angular/material/slide-toggle";
     MatIconModule,
     MatListModule,
     MatFormFieldModule,
-    MatSlideToggleModule
+    MatSlideToggleModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

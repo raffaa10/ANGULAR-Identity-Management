@@ -61,4 +61,14 @@ export class LdapListComponent implements OnInit {
     this.getUsers();
   }
 
+
+  // tslint:disable-next-line:typedef
+  edit(login: string) {
+    this.rooter.navigate(['/user', login]).then( e => {
+      if (! e) {
+        console.log('Navigation has failed');
+      }
+    });
+  }
+
 }
