@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import {LdapDetailComponent} from '../ldap-detail/ldap-detail.component';
 
 import {ActivatedRoute, Router} from '@angular/router';
-import {UsersService} from '../service/users.service';
+import {UsersService} from '../../service/users.service';
 import {FormBuilder} from '@angular/forms';
 import {MatSnackBar} from '@angular/material/snack-bar';
 
